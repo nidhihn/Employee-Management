@@ -8,7 +8,7 @@ const AddCategory = () => {
     const navigate = useNavigate()
 
     const handleSubmit = (e) => {
-        console.log(category);
+       
         e.preventDefault()
         axios.post('http://localhost:3000/auth/add_category', {category})
         .then(result => {
