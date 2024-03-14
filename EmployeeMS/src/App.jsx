@@ -12,6 +12,7 @@ import Profile from './Components/Profie'
 import AddCategory from './Components/AddCategory'
 import AddEmployee from './Components/AddEmployee'
 import EditEmployee from './Components/EditEmployee'
+import Start from './Components/Start'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,9 @@ function App() {
   return (
    <BrowserRouter>
    <Routes>
+    <Route path='/start' element={<Start/>}></Route>
     <Route path='/adminlogin' element={<Login/>}></Route>
+    <Route path='/employee_login' element={<Login/>}></Route>
     <Route path='/dashboard' element={<Dashboard/>}>
       <Route path='' element={<Home/>}></Route>
       <Route path='/dashboard/employee' element={<Employee/>}></Route>
