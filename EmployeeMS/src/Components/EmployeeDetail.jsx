@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+
 
 const EmployeeDetail = () => {
     const [employee, setEmployee]= useState([])
     const {id} = useParams()
+    const navigate= useNavigate()
     useEffect(() => {
         axios.get('http://localhost:3000/employee/detail/'+id)
         .then(result => {
