@@ -19,27 +19,12 @@ import axios from 'axios'
 
 function App() {
   const [count, setCount] = useState(0)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    axios.get('http://localhost:3000/verify')
-    .then(result => {
-      if(result.data.Status) {
-        if(result.data.role === "admin"){
-          navigate('/dashboard')
-        } else {
-         navigate('/employee_detail/'+result.data.id) 
-        }
-      } else{
-        navigate('/start')
-      }
-    }).catch(err => console.log(err))
-  }, [])
+  
 
   return (
    <BrowserRouter>
    <Routes>
-    <Route path='/start' element={<Start/>}></Route>
+    <Route path='/' element={<Start/>}></Route>
     <Route path='/adminlogin' element={<Login/>}></Route>
     <Route path='/employee_login' element={<EmployeeLogin/>}></Route>
     <Route path='/employee_detail/:id' element={<EmployeeDetail/>}></Route>
