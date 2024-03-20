@@ -18,6 +18,7 @@ const EmployeeDetail = () => {
         axios.get('http://localhost:3000/employee/logout')
         .then(result => {
             if(result.data.Status){
+                localStorage.removeItem("valid")
                 navigate('/')
             }
         }).catch(err => console.log(err))
