@@ -58,13 +58,13 @@ const Dashboard = () => {
                                 <Link to="/dashboard/profile"
                                 className="nav-link px-0 align-middle text-white" >
                                     <i className="fs-4 bi-person ms-2"></i>
-                                    <span className="ms-2 d-none d-sm-inline">Leave Application</span>
+                                    <span className="ms-2 d-none d-sm-inline">Insurance Application</span>
                                     </Link>
                             </li>
                             <li className="w-100">
                                 <Link to="/dashboard/project"
                                 className="nav-link px-0 align-middle text-white" >
-                                    <i className="fs-4 bi-person ms-2"></i>
+                                    <i className="fs-4 bi-columns ms-2"></i>
                                     <span className="ms-2 d-none d-sm-inline">Project Details</span>
                                     </Link>
                             </li>
