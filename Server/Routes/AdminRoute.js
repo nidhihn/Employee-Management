@@ -163,4 +163,21 @@ router.get('/logout', (req,res) => {
 })
 
 
+
+router.get('/profile',(req,res)=>{
+  const sql ="SELECT * FROM employeems.insurance";
+  con.query(sql, (err, result) => {
+    if(err) return res.json({Status: false, Error: err})
+      return res.json({Status: true, Result: result})
+  })
+})
+router.get('/project',(req,res)=>{
+  const sql ="SELECT * FROM employeems.project";
+  con.query(sql, (err, result) => {
+    if(err) return res.json({Status: false, Error: err})
+      return res.json({Status: true, Result: result})
+  })
+})
+
+
 export { router as adminRouter };
